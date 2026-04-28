@@ -1,1 +1,47 @@
-<h1>Video Scripts</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midweek Scripts — Nashville First</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f7f4ef; --ink: #1a1814; --ink-soft: #4a4640;
+      --ink-muted: #9a948c; --rule: #e0dbd4; --accent: #c4713a;
+    }
+    html, body { background: var(--cream); }
+    body { font-family: 'DM Sans', sans-serif; color: var(--ink); min-height: 100vh; padding: 0 0 80px; }
+    header { padding: 40px 28px 28px; border-bottom: 1px solid var(--rule); margin-bottom: 36px; }
+    .meta { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+    h1 { font-family: 'Lora', Georgia, serif; font-size: 26px; font-weight: 500; line-height: 1.25; color: var(--ink); }
+    .list { padding: 0 28px; }
+    .entry { display: flex; flex-direction: column; gap: 4px; padding: 20px 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; }
+    .entry:last-child { border-bottom: none; }
+    .entry-date { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); }
+    .entry-title { font-family: 'Lora', Georgia, serif; font-size: 18px; color: var(--ink-soft); }
+    .entry:hover .entry-title { color: var(--accent); }
+    footer { margin-top: 60px; padding: 24px 28px 0; border-top: 1px solid var(--rule); display: flex; align-items: center; gap: 10px; }
+    footer span { font-size: 11px; color: var(--ink-muted); font-weight: 300; }
+    .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--rule); }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="meta">Nashville First Baptist Church</p>
+    <h1>Midweek Scripts</h1>
+  </header>
+  <div class="list">
+    <a href="2026-04-30-midweek.html" class="entry">
+      <span class="entry-date">April 30, 2026</span>
+      <span class="entry-title">You Can&#x27;t Fill Yourself</span>
+    </a>
+  </div>
+  <footer>
+    <span>Nashville First Baptist Church</span>
+    <div class="dot"></div>
+    <span>Trevor Brown</span>
+  </footer>
+</body>
+</html>
