@@ -228,7 +228,43 @@
 
   </div>
 
-
+  <div class="map-section">
+    <div class="section-label">Filming Location</div>
+    <div id="shoot-map"></div>
+    <a class="map-link" href="https://maps.apple.com/?ll=36.16261299316201,-86.78056568038035&q=Filming+Location" target="_blank">Open in Maps ↗</a>
+  </div>
+  <script>
+  (function () {
+    document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>');
+    var s = document.createElement('script');
+    s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    s.onload = function () {
+      var map = L.map('shoot-map', {
+        center: [36.16261299316201, -86.78056568038035],
+        zoom: 15,
+        zoomControl: false,
+        dragging: false,
+        touchZoom: false,
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        keyboard: false,
+        tap: false
+      });
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap &copy; CARTO'
+      }).addTo(map);
+      var icon = L.divIcon({
+        className: '',
+        html: '<div style="width:14px;height:14px;background:#c4713a;border:2px solid #fff;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.3)"></div>',
+        iconSize: [14, 14],
+        iconAnchor: [7, 7]
+      });
+      L.marker([36.16261299316201, -86.78056568038035], { icon: icon }).addTo(map);
+    };
+    document.head.appendChild(s);
+  }());
+  </script>
 
   <footer>
     <span>Nashville First Baptist Church</span>
